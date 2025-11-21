@@ -1,0 +1,401 @@
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    line-height: 1.5;
+    color: #333;
+    background: #f5f5f5;
+}
+
+/* Header */
+.header {
+    background: #fff;
+    box-shadow: 0 2px 4px rgba(0,0,0,.1);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+    height: 60px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+}
+
+.logo {
+    font-size: 20px;
+    font-weight: bold;
+    color: #333;
+}
+
+.nav ul {
+    list-style: none;
+    display: flex;
+}
+
+.nav li {
+    position: relative;
+}
+
+.nav a {
+    color: #666;
+    text-decoration: none;
+    padding: 0 10px;
+    display: block;
+    line-height: 60px;
+}
+
+.nav a:hover {
+    color: #1890ff;
+}
+
+.dropdown ul {
+    display: none;
+    position: absolute;
+    background: #fff;
+    box-shadow: 0 2px 8px rgba(0,0,0,.15);
+    min-width: 88px;
+    flex-direction: column;
+}
+
+.dropdown:hover ul {
+    display: block;
+}
+
+.dropdown ul a {
+    line-height: 40px;
+}
+
+/* Container */
+.container {
+    margin-top: 60px;
+    padding: 10px 20px;
+}
+
+.content {
+    background: #fff;
+    border-radius: 4px;
+    padding: 10px 20px;
+    box-shadow: 0 2px 4px rgba(0,0,0,.1);
+}
+
+/* Form */
+.form-group {
+    margin-bottom: 15px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+    color: #666;
+}
+
+.form-group input[type="text"],
+.form-group input[type="password"],
+.form-group input[type="email"],
+.form-group input[type="datetime-local"],
+.form-group select,
+.form-group textarea {
+    width: 100%;
+    padding: 8px 12px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 14px;
+}
+
+.form-group textarea {
+    height: 100px;
+    resize: vertical;
+}
+
+button {
+    background: #1890ff;
+    color: #fff;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+button:hover {
+    background: #40a9ff;
+}
+
+button.danger {
+    background: #ff4d4f;
+}
+
+button.danger:hover {
+    background: #ff7875;
+}
+
+/* Table */
+.data-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 5px;
+}
+
+.data-table th,
+.data-table td {
+    padding: 6px;
+    border: 1px solid #f0f0f0;
+    text-align: left;
+}
+
+.data-table th {
+    background: #fafafa;
+    font-weight: 500;
+    cursor: pointer;
+}
+
+.data-table th:hover {
+    background: #f0f0f0;
+}
+
+.data-table th.asc:after {
+    content: ' ▲';
+}
+
+.data-table th.desc:after {
+    content: ' ▼';
+}
+
+.data-table tr:hover {
+    background: #fafafa;
+}
+
+/* Modal */
+.modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0,0,0,.5);
+    z-index: 1001;
+}
+
+.modal-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: #fff;
+    padding: 20px;
+    border-radius: 4px;
+    width: 90%;
+    max-width: 800px;
+    max-height: 90vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.modal-header {
+    padding-bottom: 15px;
+    border-bottom: 1px solid #f0f0f0;
+}
+
+.modal-body {
+    flex: 1;
+    overflow-y: auto;
+    padding: 15px 0;
+}
+
+.modal-footer {
+    padding-top: 15px;
+    border-top: 1px solid #f0f0f0;
+    text-align: right;
+}
+
+.close {
+    position: absolute;
+    right: 20px;
+    top: 20px;
+    font-size: 24px;
+    color: #999;
+    cursor: pointer;
+}
+
+/* Tabs */
+.tabs {
+    margin-top: 15px;
+}
+
+.tab-header {
+    border-bottom: 1px solid #f0f0f0;
+    margin-bottom: 15px;
+}
+
+.tab-header span {
+    display: inline-block;
+    padding: 8px 16px;
+    cursor: pointer;
+    margin-right: 10px;
+    color: #666;
+}
+
+.tab-header span.active {
+    color: #1890ff;
+    border-bottom: 2px solid #1890ff;
+}
+
+.tab-pane {
+    display: none;
+}
+
+.tab-pane.active {
+    display: block;
+}
+
+/* Pagination */
+.pagination {
+    margin-top: 10px;
+    text-align: center;
+}
+
+.pagination a {
+    display: inline-block;
+    padding: 6px;
+    margin: 0 4px;
+    color: #666;
+    text-decoration: none;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+.pagination a:hover {
+    color: #1890ff;
+    border-color: #1890ff;
+}
+
+.pagination a.disabled {
+    color: #999;
+    border-color: #eee;
+    cursor: not-allowed;
+}
+
+.pagination select {
+    padding: 6px;
+    margin: 0 4px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+/* Loading */
+.loading-mask {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(255,255,255,.8);
+    z-index: 1002;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.loading-spinner {
+    width: 40px;
+    height: 40px;
+    border: 4px solid #f3f3f3;
+    border-top: 4px solid #1890ff;
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+/* Login page */
+.login-page {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    background: #f0f2f5;
+}
+
+.login-box {
+    background: #fff;
+    padding: 40px;
+    border-radius: 4px;
+    box-shadow: 0 2px 8px rgba(0,0,0,.1);
+    width: 100%;
+    max-width: 400px;
+}
+
+.login-box h2 {
+    text-align: center;
+    margin-bottom: 30px;
+    color: #333;
+}
+
+/* List tools */
+.list-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.list-tools {
+    display: flex;
+    gap: 10px;
+}
+
+.list-tools input,
+.list-tools select {
+    padding: 6px 12px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+/* Detail table */
+.detail-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.detail-table td {
+    padding: 8px;
+    border: 1px solid #f0f0f0;
+}
+
+.detail-table td:first-child {
+    width: 120px;
+    background: #fafafa;
+    font-weight: 500;
+}
+
+/* Export box */
+.export-box {
+    max-width: 600px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.export-box ul {
+    text-align: left;
+    margin: 15px 0;
+    padding-left: 20px;
+}
+
+.export-box #exportResult {
+    margin-top: 15px;
+    padding: 15px;
+    background: #f6ffed;
+    border: 1px solid #b7eb8f;
+    border-radius: 4px;
+}
